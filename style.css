@@ -1,0 +1,385 @@
+:root {
+    --color-darkGrey: #545F66;
+    --color-lightgrey: #829399;
+    --color-blue: #D0F4EA;
+    --color-lightGreen: #E8FCC2;
+    --color-darkGreen: #B1CC74;
+    --color-blackBlue: #00253d;
+    --color-back: #f6ffff;
+}
+
+body {
+    margin: 0;
+    cursor: url('imgs/wandsmol.png') 0 0, auto;
+}
+
+a:hover {
+    cursor: url('imgs/wandsmol2.png') 0 0, auto;
+}
+
+.wwweb-wizard {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-back);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px;
+
+    font-size: 16px;
+    color: var(--color-blackBlue);
+    font-family: Orbit;
+}
+
+.text {
+    width: 100%;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 10px;
+    font-size: 24px;
+    color: var(--color-blackBlue);
+    font-family: Lacquer;
+}
+
+.the-history-of {
+    font-size: 48px;
+}
+
+.featuring-the-wwweb {
+    align-self: stretch;
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 120px;
+    width: 4px;
+    background: var(--color-lightgrey);
+    transform: translateX(-50%);
+    animation: lineAnimation 2s ease-in-out;
+}
+
+@keyframes lineAnimation {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+.event {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.event:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.event:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.dot {
+    position: absolute;
+    top: 25px;
+    width: 14px;
+    height: 14px;
+    background: var(--color-blackBlue);
+    border-radius: 50%;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0);
+    animation: dotAppear 0.4s ease-out forwards;
+}
+
+@keyframes dotAppear {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.event:nth-child(1) .dot {
+    animation-delay: 0.2s;
+}
+
+.event:nth-child(2) .dot {
+    animation-delay: 0.5s;
+}
+
+.event:nth-child(3) .dot {
+    animation-delay: 0.8s;
+}
+
+.event:nth-child(4) .dot {
+    animation-delay: 1.1s;
+}
+
+.event:nth-child(odd) .dot {
+    right: -7px;
+}
+
+.event:nth-child(even) .dot {
+    left: -7px;
+}
+
+.content {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 320px;
+}
+
+.wave-border {
+    position: relative;
+    display: inline-block;
+}
+
+.wave-border:hover {
+    background-color: var(--color-lightGreen);
+}
+
+.wave-border .content {
+    transition: transform 0.3s ease;
+}
+
+.wave-border:hover .content {
+    transform: scale(1.05);
+    cursor: url('imgs/wandsmol2.png') 0 0, auto;
+}
+
+/* top wave */
+.wave-border:hover::before{
+    content: "";
+    position: absolute;
+    left: -11px;
+    right: -11px;
+    top: -15px;
+    height: 25px;
+    background-repeat: repeat-x;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px 15px, var(--color-lightGreen) 12px, transparent 13px);
+    animation: waveXReverse 1s linear infinite;
+}
+
+/* bottom wave */
+.wave-border:hover::after{
+    content: "";
+    position: absolute;
+    left: -11px;
+    right: -11px;
+    bottom: -30px;
+    height: 25px;
+    background-repeat: repeat-x;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px -3px, var(--color-lightGreen) 12px, transparent 13px);
+    animation: waveX 1s linear infinite;
+
+}
+
+/* left wave */
+.content:hover::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    bottom: -8px;
+    left: -10px;
+    width: 10px;
+    background-repeat: repeat-y;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 15px 10px, var(--color-lightGreen) 12px, transparent 13px);
+    animation: waveY 1s linear infinite;
+}
+
+/* right wave */
+.content:hover::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    bottom: -8px;
+    right: -10px;
+    width: 10px;
+    background-repeat: repeat-y;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at -5px 10px, var(--color-lightGreen) 12px, transparent 13px);
+    animation: waveYReverse 1s linear infinite;
+}
+
+@keyframes waveX {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 20px 0;
+    }
+}
+
+@keyframes waveXReverse {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -20px 0;
+    }
+}
+
+@keyframes waveY {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 20px;
+    }
+}
+
+@keyframes waveYReverse {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -20px;
+    }
+}
+
+.branch {
+    margin-top: 15px;
+    padding-left: 20px;
+    border-left: 2px dashed #829399;
+    animation: none;
+}
+
+.branch .event {
+    width: 100%;
+    left: 0 !important;
+    padding: 10px 0 10px 20px;
+    text-align: left !important;
+}
+
+.branch .dot {
+    display: none;
+}
+
+.branch .content {
+    background: var(--color-blue);
+    font-size: 14px;
+    padding: 10px;
+    max-width: 260px;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+.branch .content,
+.branch .content:hover,
+.branch .content:hover::before,
+.branch .content:hover::after,
+.end-node {
+    transform: none !important;
+    box-shadow: none !important;
+    animation: none !important;
+    cursor: url('imgs/wandsmol.png') 0 0, auto;
+    background-image: none !important;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popup-content {
+    background: white;
+    padding: 40px 20px 20px 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    color: var(--color-blackBlue);
+    font-family: Orbit;
+    animation: popupBounce 0.4s ease-out;
+}
+
+@keyframes popupBounce {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.popup-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: url('imgs/wandsmol2.png') 0 0, auto;
+}
+
+.end-node {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.end-node .content {
+    text-align: center;
+}
+
+.end-node::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    background: var(--color-blackBlue);
+    border-radius: 50%;
+    transform: translateX(-50%);
+}

@@ -1,9 +1,113 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>The History of The Internet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wwweb History</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lacquer:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbit:wght@400&display=swap" />
 </head>
+
 <body>
-    <h1>The History of the Internet!</h1>
+    <div class="wwweb-wizard">
+        <div class="text">
+            <div class="the-history-of">The History of the Internet</div>
+            <div class="featuring-the-wwweb">Guided by the Wwweb Wizard</div>
+            <div class="featuring-the-wwweb">By Sara Adams</div>
+        </div>
+        <div class="timeline">
+            <div class="event" onclick="openPopup(
+                '1969 - ARPANET',
+                'The first message sent between two computers, marking the birth of the internet.',
+                'https://upload.wikimedia.org/wikipedia/commons/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg'
+            )">
+                <div class="dot"></div>
+                <div class="wave-border">
+                    <div class="content">
+                        <h3>1969 - ARPANET</h3>
+                        <p>The first message is sent between computers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="dot"></div>
+                <div class="wave-border">
+                    <div class="content">
+                        <h3>1983 - TCP/IP</h3>
+                        <p>The internet adopts TCP/IP protocol.</p>
+                    </div>
+                </div>
+
+                <!-- Branch -->
+                <div class="branch">
+                    <div class="event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>1989 - WWW</h3>
+                            <p>Tim Berners-Lee invents the web.</p>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>1993 - Mosaic</h3>
+                            <p>First popular web browser released.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="dot"></div>
+                <div class="wave-border">
+                    <div class="content">
+                        <h3>2004 - Social Media</h3>
+                        <p>Rise of platforms like Facebook.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="end-node">
+                <div class="wave-border">
+                    <div class="content">
+                        <h3>The Future of the Internet</h3>
+                        <p>Where will we go next?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <img id="popup-img" src="" alt="">
+            <h2 id="popup-title"></h2>
+            <p id="popup-text"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript for popup functionality -->
+    <script>
+        function openPopup(title, text, img) {
+            document.getElementById("popup").style.display = "flex";
+            document.getElementById("popup-title").innerText = title;
+            document.getElementById("popup-text").innerText = text;
+            document.getElementById("popup-img").src = img;
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        window.onclick = function (e) {
+            const popup = document.getElementById("popup");
+            if (e.target === popup) {
+                popup.style.display = "none";
+            }
+        }
+    </script>
 </body>
+
 </html>
