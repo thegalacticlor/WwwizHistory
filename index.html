@@ -7,7 +7,7 @@
     <title>Wwweb History</title>
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lacquer:wght@400&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbit:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
 </head>
 
 <body>
@@ -19,59 +19,156 @@
         </div>
         <div class="timeline">
             <div class="event" onclick="openPopup(
-                '1969 - ARPANET',
+                'Foundations of the Internet',
+                'Everything began with the concept of the &quot;Intergalactic Network&quot; by J.C.R. Licklider, which discussed the concept of a global interconnected network. At this time many special-purpose systems such as SAGE, SABRE, and AUTODIN I were developed, being some of the first systems with a connected system between computers through new time-sharing systems in 1962. Later in 1969 the first host-to-host network called the ARPANET was created with the goal of connecting government sites to the general public. This was the first system that was public to use and operate on.',
+                'https://upload.wikimedia.org/wikipedia/commons/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg'
+            )">
+                <div class="dot"></div>
+                <div class="wave-border">
+                    <div class="content">
+                        <h3>Foundations of the Internet</h3>
+                        <p>(1960's)</p>
+                    </div>
+                </div>
+                <!-- Branch -->
+                <div class="branch">
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>Special-purpose systems created- 1962</h3>
+                            <p>Special-purpose systems such as SAGE, SABRE, and AUTODIN I were developed</p>
+                        </div>
+                    </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>Concept of a "Packet" - 1967</h3>
+                            <p>The implementation of the term "Packet" to describe the data in transmission</p>
+                        </div>
+                    </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>ARPANET - 1969</h3>
+                            <p>First sucessful host-to-host communication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event" onclick="openPopup(
+                'The Beginning of Networking',
                 'The first message sent between two computers, marking the birth of the internet.',
                 'https://upload.wikimedia.org/wikipedia/commons/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg'
             )">
                 <div class="dot"></div>
                 <div class="wave-border">
                     <div class="content">
-                        <h3>1969 - ARPANET</h3>
-                        <p>The first message is sent between computers.</p>
+                        <h3>The Beginning of Networking</h3>
+                        <p>(1970's - 1980's)</p>
+                    </div>
+                </div>
+                <!-- Branch -->
+                <div class="branch">
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>1974 - TCP(Transmission Control Protocol) was introduced</h3>
+                            <p>This is the protocol for how data can be transmitted and built from sny computer to another</p>
+                        </div>
+                    </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>1976 - UNIX System created by Bell Labs</h3>
+                            <p>Integrates TCP/IP protocols to create dial-up connections</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="event">
+            <div class="event" onclick="openPopup(
+                'World Wide Web',
+                'The first message sent between two computers, marking the birth of the internet.',
+                'https://upload.wikimedia.org/wikipedia/commons/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg'
+            )">
                 <div class="dot"></div>
                 <div class="wave-border">
                     <div class="content">
-                        <h3>1983 - TCP/IP</h3>
-                        <p>The internet adopts TCP/IP protocol.</p>
+                        <h3>World Wide Web</h3>
+                        <p>(1990's)</p>
                     </div>
                 </div>
-
                 <!-- Branch -->
                 <div class="branch">
-                    <div class="event">
+                    <div class="branch-event">
                         <div class="dot"></div>
                         <div class="content">
                             <h3>1989 - WWW</h3>
                             <p>Tim Berners-Lee invents the web.</p>
                         </div>
                     </div>
-                    <div class="event">
+                </div>
+            </div>
+            <div class="event" onclick="openPopup(
+                'Web 2.0 and the Creation of Social Media',
+                'The first message sent between two computers, marking the birth of the internet.',
+                'https://upload.wikimedia.org/wikipedia/commons/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg'
+            )">
+                <div class="dot"></div>
+                <div class="wave-border">
+                    <div class="content">
+                        <h3>Web 2.0 and the Creation of Social Media</h3>
+                        <p>(2000's - 2010's)</p>
+                    </div>
+                </div>
+                <!-- Branch -->
+                <div class="branch">
+                    <div class="branch-event">
                         <div class="dot"></div>
                         <div class="content">
-                            <h3>1993 - Mosaic</h3>
-                            <p>First popular web browser released.</p>
+                            <h3>1989 - WWW</h3>
+                            <p>Tim Berners-Lee invents the web.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="event">
+            <div class="event" onclick="openPopup(
+                'Newer Developments',
+                'The first message sent between two computers, marking the birth of the internet.',
+                'https://upload.wikimedia.org/wikipedia/commons/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg'
+            )">
                 <div class="dot"></div>
                 <div class="wave-border">
                     <div class="content">
-                        <h3>2004 - Social Media</h3>
-                        <p>Rise of platforms like Facebook.</p>
+                        <h3>Newer Developments</h3>
+                        <p>(2020's - ongoing)</p>
+                    </div>
+                </div>
+                <!-- Branch -->
+                <div class="branch">
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>1989 - WWW</h3>
+                            <p>Tim Berners-Lee invents the web.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="end-node">
+
+            <div class="end-node" onclick="openPopup(
+                'Sources',
+                '<div style=\'display:flex; flex-direction:column; gap:15px; text-align: left;\'>\
+                    <p class=\'hanging-indent\'>Rajaraman, V. (2022). A Concise History of the Internet—II. <i>Resonance, 27</i>(11), 1841–1856. <a href=\'https://doi.org/10.1007/s12045-022-1483-2\' target=\'_blank\'>https://doi.org/10.1007/s12045-022-1483-2</a></p>\
+                    <p class=\'hanging-indent\'>Rajaraman, V. (2022). A Concise History of the Internet—II. <i>Resonance, 27</i>(12), 2045–2068. <a href=\'https://doi.org/10.1007/s12045-022-1505-0\' target=\'_blank\'>https://doi.org/10.1007/s12045-022-1505-0</a></p>\
+                    <p class=\'hanging-indent\'>Leiner, B. M., Cerf, V. G., Clark, D. D., Kahn, R. E., Kleinrock, L., Lynch, D. C., Postel, J., Roberts, L. G., & Wolff, S. (2009). A brief history of the internet. <i>ACM SIGCOMM Computer Communication Review, 39</i>(5), 22–31. <a href=\'https://doi.org/10.1145/1629607.1629613\' target=\'_blank\'>https://doi.org/10.1145/1629607.1629613</a></p>\
+                    <p class=\'hanging-indent\'>Internet Society. (1997). Brief History of the Internet | Internet Society. <i>Internet Society</i>. <a href=\'https://www.internetsociety.org/internet/history-internet/brief-history-internet/\' target=\'_blank\'>https://www.internetsociety.org/internet/history-internet/brief-history-internet/</a></p>\
+                    <p class=\'hanging-indent\'>Kahn, R., Dennis, M. A. (2026, March 31). Internet. <i>Encyclopedia Britannica</i>. <a href=\'https://www.britannica.com/technology/Internet\' target=\'_blank\'>https://www.britannica.com/technology/Internet</a></p>\
+                </div>'
+            )">
                 <div class="wave-border">
                     <div class="content">
                         <h3>The Future of the Internet</h3>
-                        <p>Where will we go next?</p>
+                        <p>(Click here for sources)</p>
                     </div>
                 </div>
             </div>
@@ -93,7 +190,7 @@
         function openPopup(title, text, img) {
             document.getElementById("popup").style.display = "flex";
             document.getElementById("popup-title").innerText = title;
-            document.getElementById("popup-text").innerText = text;
+            document.getElementById("popup-text").innerHTML = text;
             document.getElementById("popup-img").src = img;
         }
 
