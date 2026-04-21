@@ -369,7 +369,7 @@ a:hover {
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 999;
 }
 
 .popup-content {
@@ -423,6 +423,13 @@ a:hover {
     overflow: hidden;
 }
 
+#popup-caption {
+    font-size: 8px !important;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+}
+
 .hanging-indent {
     padding-left: 20px;
     text-indent: -20px;
@@ -459,4 +466,20 @@ a:hover {
     background: var(--color-blackBlue);
     border-radius: 50%;
     transform: translateX(-50%);
+}
+
+.floating-img {
+    position: absolute;
+    z-index: 999;
+    width: 350px;
+    height: auto;
+    pointer-events: none;
+}
+
+.floating-img-init{
+    position: absolute;
+    z-index: 100;
+    width: 150px;
+    height: auto;
+    pointer-events: none;
 }

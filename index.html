@@ -7,10 +7,17 @@
     <title>Wwweb History</title>
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lacquer:wght@400&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
 </head>
 
 <body>
+    <img src="imgs/wiz1.png" class="floating-img-init" style="top: 10vh; right: 13vw;">
+    <img src="imgs/wiz2.png" class="floating-img" style="top: 30vh; right: 20vw;">
+    <img src="imgs/wiz3.png" class="floating-img" style="top: 110vh; left: 20vw;">
+    <img src="imgs/wiz6.png" class="floating-img" style="top: 200vh; right: 20vw;">
+    <img src="imgs/wiz4.png" class="floating-img" style="top: 280vh; left: 20vw;">
+    <img src="imgs/wiz5.png" class="floating-img" style="top: 370vh; right: 20vw;">
     <div class="wwweb-wizard">
         <div class="text">
             <div class="the-history-of">The History of the Internet</div>
@@ -18,14 +25,15 @@
             <div class="featuring-the-wwweb">By Sara Adams</div>
         </div>
         <div class="timeline">
-            <div class="event" onclick="openPopup(
-                'Foundations of the Internet',
-                'Everything began with the concept of the &quot;Intergalactic Network&quot; by J.C.R. Licklider, which discussed the concept of a global interconnected network. At this time many special-purpose systems such as SAGE, SABRE, and AUTODIN I were developed, being some of the first systems with a connected system between computers through new time-sharing systems in 1962. Later in 1969 the first host-to-host network called the ARPANET was created with the goal of connecting government sites to the general public. This was the first system that was public to use and operate on.',
-                'https://upload.wikimedia.org/wikipedia/commons/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg'
-            )">
+            <div class="event">
                 <div class="dot"></div>
                 <div class="wave-border">
-                    <div class="content">
+                    <div class="content" onclick="openPopup(
+                        'Foundations of the Internet',
+                        'Everything began with the concept of the &quot;Intergalactic Network&quot; by J.C.R. Licklider, which described the concept of a global interconnected network [4]. At this time many special-purpose systems such as SAGE, SABRE, and AUTODIN I were also being developed, as they among others were some of the first systems with a connected system between computers through new time-sharing systems in 1962 [5, 6]. Later in 1969 the first host-to-host network called the ARPANET was created with the goal of connecting government sites to the general public [1, 3]. This was the first system that was public to use and operate on, and laid the groundwork for all future interconnected systems.',
+                        'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-Bv0VQoZjpgew-fOmfNAWA.jpeg',
+                        '<a href=https://enfiq.medium.com/the-untold-story-of-the-internet-how-a-1969-military-project-became-the-backbone-of-the-cloud-53245540d125\' target=\'_blank\'>Image by Enfiq, The Untold Story of the Internet How a 1969 Military Project Became the Backbone of the Cloud, Published on Medium, 2025</a>'
+                    )">
                         <h3>Foundations of the Internet</h3>
                         <p>(1960's)</p>
                     </div>
@@ -55,16 +63,17 @@
                     </div>
                 </div>
             </div>
-            <div class="event" onclick="openPopup(
-                'The Beginning of Networking',
-                'The first message sent between two computers, marking the birth of the internet.',
-                'https://upload.wikimedia.org/wikipedia/commons/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg'
-            )">
+            <div class="event">
                 <div class="dot"></div>
                 <div class="wave-border">
-                    <div class="content">
+                    <div class="content" onclick="openPopup(
+                        'The Beginning of Networking',
+                        'With the continued development of the newly made ARPANET, more technology was introduced such as the Network Control Protocol  in 1970 which acted as the first instructions for a computer to handle host-to-host connections [4] as well as the concept of Transmission Control Protocol (TCP) in 1974 creating the concept of a &quot;Packet&quot;, a term used to describe data being transmitted [5, 6]. Later in the 1970\'s there was also further development for a computer system itself, with the UNIX System being released in 1976 displaying the integration of TCP and Internet Protocols [6]. As more people had access to these systems the more companies found cheaper ways to reproduce these systems, with the release of the Apple II, TRS-80, and Commodore PET personal computers marked the shift away from defense and more towards the public [3, 6].',
+                        'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEn7C2JVNYJ4eDNa08ZmNMRQ2JElKxPYnX0Tn91bFJJsJlgMT9LelQKKdhhuZcabNOoJDGgCVyaYzlA9LbmWmFh-C1lDtl424vsPUx_opcXQQ0q9hJFXuv11BOkVYqvy-mFxdaq_ncz0Wo/w1200-h630-p-k-no-nu/personal-computers-a-history-of-the-hardware-that-changed-the-world-3224913501.jpg',
+                        '<a href=\'https://www.ibm.com/history/personal-computer\' target=\'_blank\'>Image by IBM</a>'
+                    )">
                         <h3>The Beginning of Networking</h3>
-                        <p>(1970's - 1980's)</p>
+                        <p>(1970's)</p>
                     </div>
                 </div>
                 <!-- Branch -->
@@ -73,7 +82,8 @@
                         <div class="dot"></div>
                         <div class="content">
                             <h3>1974 - TCP(Transmission Control Protocol) was introduced</h3>
-                            <p>This is the protocol for how data can be transmitted and built from sny computer to another</p>
+                            <p>This is the protocol for how data can be transmitted and built from any computer to
+                                another</p>
                         </div>
                     </div>
                     <div class="branch-event">
@@ -83,18 +93,26 @@
                             <p>Integrates TCP/IP protocols to create dial-up connections</p>
                         </div>
                     </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>1977 - Era of the personal computer begins</h3>
+                            <p>Personal computers such as the Apple II, TRS-80, and Commodore PET are announced</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="event" onclick="openPopup(
-                'World Wide Web',
-                'The first message sent between two computers, marking the birth of the internet.',
-                'https://upload.wikimedia.org/wikipedia/commons/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg'
-            )">
+            <div class="event">
                 <div class="dot"></div>
                 <div class="wave-border">
-                    <div class="content">
+                    <div class="content" onclick="openPopup(
+                        'World Wide Web',
+                        'This era claimed some of the most essential developments made to the internet. With the new push for more personal computers, companies saw this opportunity to discover what would become the next big thing such as local networking with AT&T and the ethernet [5]. This also gave way to the creation of the Domain Name System (DNS) in 1983 that allowed users to access specific site locations along the web [2, 3, 6] along with the development of early web searching tools like Gopher in 1990 [3]. A critical point in the internets development also occurred by introducing threats such as &quot;worms&quot; that would travel through computers and damage them, the most notable being the Morris Worm in 1988 that intended to slow systems down [6, 7]. The 80\'s and 90\'s set the stage for what the internet would become and the ways different people could act with it.',
+                        'https://media.cnn.com/api/v1/images/stellar/prod/210614211407-01-sir-tim-berners-lee-puts-original-world-wide-web-code-up-for-sale.jpg?q=w_1600,h_1075,x_0,y_0,c_fill',
+                        '<a href=\'https://edition.cnn.com/style/article/tim-berners-lee-nft-auction\' target=\'_blank\'>Image by Sotheby\'s, used in the CNN article &quot;The World Wide Web’s inventor sold its original code for $5.4 million&quot;</a>'
+                    )">
                         <h3>World Wide Web</h3>
-                        <p>(1990's)</p>
+                        <p>(1980's - 1990's)</p>
                     </div>
                 </div>
                 <!-- Branch -->
@@ -102,20 +120,45 @@
                     <div class="branch-event">
                         <div class="dot"></div>
                         <div class="content">
-                            <h3>1989 - WWW</h3>
-                            <p>Tim Berners-Lee invents the web.</p>
+                            <h3>Domain Name System (DNS) is developed - 1983</h3>
+                            <p>Jon Postel, Paul Mockapetris, and Craig Partridge create the standard web domain system
+                                still used today</p>
+                        </div>
+                    </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>The internet faces some of it's first attacks - 1988</h3>
+                            <p>The Morris Worm along with other internet worm begin to become a more lethal issue</p>
+                        </div>
+                    </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>World Wide Web - 1990</h3>
+                            <p>Tim Berners-Lee implements the idea of a hypertext system, creating the World Wide Web
+                            </p>
+                        </div>
+                    </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>The ARPANET is officially shut down - 1990</h3>
+                            <p>With the rapid growth of the internet, more places began to host servers and allow more
+                                user to join.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="event" onclick="openPopup(
-                'Web 2.0 and the Creation of Social Media',
-                'The first message sent between two computers, marking the birth of the internet.',
-                'https://upload.wikimedia.org/wikipedia/commons/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg'
-            )">
+            <div class="event">
                 <div class="dot"></div>
                 <div class="wave-border">
-                    <div class="content">
+                    <div class="content" onclick="openPopup(
+                        'Web 2.0 and the Creation of Social Media',
+                        'By this point the internet had vastly expanded upon what it originally was, and everyone had their eyes on how it was developing, especially investors. During 2000 to 2001 the dot-com bubble \'burst\', as the market crashed given how little returns investors had received after putting so much into dot-com companies [5]. This marked the end of the way the web initially operated and ushered in Web 2.0, where more focus was put on user created content such as with social media in 2005 [5]. In 2007 there also came the development of the mobile phone by Apple, a major step towards making computers as small and portable as possible along with offering more user convenience [5].',
+                        'https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_1920,h_960,g_auto/dpr_auto/f_auto/q_auto:eco/v1/steve-jobs-iphone-175852238?_a=BAVMn6DY0',
+                        '<a href=\'https://www.history.com/this-day-in-history/january-9/steve-jobs-debuts-the-iphone\' target=\'_blank\'>Image by Tony Avelar/AFP/Getty Images, used in History.com</a>'
+                    )">
                         <h3>Web 2.0 and the Creation of Social Media</h3>
                         <p>(2000's - 2010's)</p>
                     </div>
@@ -125,20 +168,43 @@
                     <div class="branch-event">
                         <div class="dot"></div>
                         <div class="content">
-                            <h3>1989 - WWW</h3>
-                            <p>Tim Berners-Lee invents the web.</p>
+                            <h3>2001 - The dot-com bubble bursts</h3>
+                            <p>The crash of the market due to too many investors being interested in the internet's
+                                development and their investment was never returned</p>
+                        </div>
+                    </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>2005 - Web 2.0</h3>
+                            <p>The evolution of the web towards more user-based content</p>
+                        </div>
+                    </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>2005 - Social Medias introduced</h3>
+                            <p>Social medias like Facebook and Youtube were created</p>
+                        </div>
+                    </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>2007 - Iphone developed</h3>
+                            <p>Developed by Apple, this introduced the creation of portable computers</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="event" onclick="openPopup(
-                'Newer Developments',
-                'The first message sent between two computers, marking the birth of the internet.',
-                'https://upload.wikimedia.org/wikipedia/commons/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg'
-            )">
+            <div class="event">
                 <div class="dot"></div>
                 <div class="wave-border">
-                    <div class="content">
+                    <div class="content" onclick="openPopup(
+                        'Newer Developments',
+                        'We\'re now at our current stage, where all developments have happened within the past few years. During 2020 5G networks were implemented across the world, ensuring more connectivity and stronger satellite connections [5]. The Covid Pandemic also majorly shifted where technology developed, as everything had to be digitized and introduced new digital environments people needed to use [8]. Finally, with the release of ChatGPT and other generative AI\'s to the public for use in 2022, the integration of generative AI in everything has began to cause major effects to peoples everyday lives [5, 8]. New technology is created every day, and so much of its foundations lie in the history of the technology itself that brings it to life.',
+                        'https://i.insider.com/689c8f48a17a8c5b4052c721?width=700',
+                        '<a href=\'https://www.ibm.com/history/personal-computer\' target=\'_blank\'>Image by Jonathan Raa/NurPhoto via Getty Images, used in Buisness Insider\'s article &quot;What is ChatGPT? Here\'s everything you need to know about OpenAI\'s famous chatbot.&quot;</a>'
+                    )">
                         <h3>Newer Developments</h3>
                         <p>(2020's - ongoing)</p>
                     </div>
@@ -148,8 +214,24 @@
                     <div class="branch-event">
                         <div class="dot"></div>
                         <div class="content">
-                            <h3>1989 - WWW</h3>
-                            <p>Tim Berners-Lee invents the web.</p>
+                            <h3>2020 - 5G networks implemented everywhere</h3>
+                            <p>The widespread usage of 5G technology from nearly anywhere</p>
+                        </div>
+                    </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>2020 - The digitization of everything</h3>
+                            <p>Many programs took a massive step towards all aspects of life being integrated with
+                                technology such as school and work</p>
+                        </div>
+                    </div>
+                    <div class="branch-event">
+                        <div class="dot"></div>
+                        <div class="content">
+                            <h3>2022 - AI Wars</h3>
+                            <p>ChatGPT and other Generative AI models were created and became accessible for public use
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -158,12 +240,17 @@
             <div class="end-node" onclick="openPopup(
                 'Sources',
                 '<div style=\'display:flex; flex-direction:column; gap:15px; text-align: left;\'>\
-                    <p class=\'hanging-indent\'>Rajaraman, V. (2022). A Concise History of the Internet—II. <i>Resonance, 27</i>(11), 1841–1856. <a href=\'https://doi.org/10.1007/s12045-022-1483-2\' target=\'_blank\'>https://doi.org/10.1007/s12045-022-1483-2</a></p>\
-                    <p class=\'hanging-indent\'>Rajaraman, V. (2022). A Concise History of the Internet—II. <i>Resonance, 27</i>(12), 2045–2068. <a href=\'https://doi.org/10.1007/s12045-022-1505-0\' target=\'_blank\'>https://doi.org/10.1007/s12045-022-1505-0</a></p>\
-                    <p class=\'hanging-indent\'>Leiner, B. M., Cerf, V. G., Clark, D. D., Kahn, R. E., Kleinrock, L., Lynch, D. C., Postel, J., Roberts, L. G., & Wolff, S. (2009). A brief history of the internet. <i>ACM SIGCOMM Computer Communication Review, 39</i>(5), 22–31. <a href=\'https://doi.org/10.1145/1629607.1629613\' target=\'_blank\'>https://doi.org/10.1145/1629607.1629613</a></p>\
-                    <p class=\'hanging-indent\'>Internet Society. (1997). Brief History of the Internet | Internet Society. <i>Internet Society</i>. <a href=\'https://www.internetsociety.org/internet/history-internet/brief-history-internet/\' target=\'_blank\'>https://www.internetsociety.org/internet/history-internet/brief-history-internet/</a></p>\
-                    <p class=\'hanging-indent\'>Kahn, R., Dennis, M. A. (2026, March 31). Internet. <i>Encyclopedia Britannica</i>. <a href=\'https://www.britannica.com/technology/Internet\' target=\'_blank\'>https://www.britannica.com/technology/Internet</a></p>\
-                </div>'
+                    <p class=\'hanging-indent\'>[1] Rajaraman, V. (2022). A Concise History of the Internet—I. <i>Resonance, 27</i>(11), 1841–1856. <a href=\'https://doi.org/10.1007/s12045-022-1483-2\' target=\'_blank\'>https://doi.org/10.1007/s12045-022-1483-2</a></p>\
+                    <p class=\'hanging-indent\'>[2] Rajaraman, V. (2022). A Concise History of the Internet—II. <i>Resonance, 27</i>(12), 2045–2068. <a href=\'https://doi.org/10.1007/s12045-022-1505-0\' target=\'_blank\'>https://doi.org/10.1007/s12045-022-1505-0</a></p>\
+                    <p class=\'hanging-indent\'>[3] Leiner, B. M., Cerf, V. G., Clark, D. D., Kahn, R. E., Kleinrock, L., Lynch, D. C., Postel, J., Roberts, L. G., & Wolff, S. (2009). A brief history of the internet. <i>ACM SIGCOMM Computer Communication Review, 39</i>(5), 22–31. <a href=\'https://doi.org/10.1145/1629607.1629613\' target=\'_blank\'>https://doi.org/10.1145/1629607.1629613</a></p>\
+                    <p class=\'hanging-indent\'>[4] Internet Society. (1997). Brief History of the Internet | Internet Society. <i>Internet Society</i>. <a href=\'https://www.internetsociety.org/internet/history-internet/brief-history-internet/\' target=\'_blank\'>https://www.internetsociety.org/internet/history-internet/brief-history-internet/</a></p>\
+                    <p class=\'hanging-indent\'>[5] Kahn, R., Dennis, M. A. (2026). Internet. <i>Encyclopedia Britannica</i>. <a href=\'https://www.britannica.com/technology/Internet\' target=\'_blank\'>https://www.britannica.com/technology/Internet</a></p>\
+                    <p class=\'hanging-indent\'>[6] Computer History Museum. (2000). <i>Internet history 1962 to 1992.</i> <a href=\'https://www.computerhistory.org/internethistory\' target=\'_blank\'>https://www.computerhistory.org/internethistory</a></p>\
+                    <p class=\'hanging-indent\'>[7] FBI. (2018). <i>The Morris Worm.</i> <a href=\'https://www.fbi.gov/news/stories/morris-worm-30-years-since-first-major-attack-on-internet-110218\' target=\'_blank\'>https://www.fbi.gov/news/stories/morris-worm-30-years-since-first-major-attack-on-internet-110218</a></p>\
+                    <p class=\'hanging-indent\'>[8] Franco et al. (2022). Digital transformation in school management. <i>Gestão & Produção</i>. <a href=\'https://doi.org/10.1590/1806-9649-2022v29e622\' target=\'_blank\'>https://doi.org/10.1590/1806-9649-2022v29e622</a></p>\
+                </div>',
+                'https://voyager.nz/images/uploads/blog/dailup.jpg',
+                ''
             )">
                 <div class="wave-border">
                     <div class="content">
@@ -180,6 +267,7 @@
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup()">&times;</span>
             <img id="popup-img" src="" alt="">
+            <p id="popup-caption"></p>
             <h2 id="popup-title"></h2>
             <p id="popup-text"></p>
         </div>
@@ -187,11 +275,12 @@
 
     <!-- JavaScript for popup functionality -->
     <script>
-        function openPopup(title, text, img) {
+        function openPopup(title, text, img, caption) {
             document.getElementById("popup").style.display = "flex";
             document.getElementById("popup-title").innerText = title;
             document.getElementById("popup-text").innerHTML = text;
             document.getElementById("popup-img").src = img;
+            document.getElementById("popup-caption").innerHTML = caption;
         }
 
         function closePopup() {
